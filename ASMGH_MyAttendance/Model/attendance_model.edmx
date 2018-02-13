@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AttendanceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="emp_attendance">
+          <Key>
+            <PropertyRef Name="transaction_id" />
+          </Key>
+          <Property Name="emp_num" Type="int" Nullable="false" />
+          <Property Name="acct_num" Type="int" Nullable="false" />
+          <Property Name="emp_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="att_date" Type="date" />
+          <Property Name="Timetable" Type="varchar" MaxLength="50" />
+          <Property Name="clock_in" Type="time" Precision="7" />
+          <Property Name="clock_out" Type="time" Precision="7" />
+          <Property Name="IsAbsent" Type="varchar" MaxLength="8" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <Function Name="usp_GetAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emp_num" Type="int" Mode="In" />
+          <Parameter Name="emp_TimeTable" Type="varchar" Mode="In" />
+          <Parameter Name="month" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emp_number" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="AttendanceModelStoreContainer">
+          <EntitySet Name="emp_attendance" EntityType="Self.emp_attendance" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AttendanceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AttendanceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="emp_attendance" EntityType="AttendanceModel.emp_attendance" />
+          <FunctionImport Name="usp_getName" ReturnType="Collection(String)">
+          <Parameter Name="emp_number" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetAttendance" ReturnType="Collection(AttendanceModel.attendace)">
+            <Parameter Name="emp_num" Mode="In" Type="Int32" />
+            <Parameter Name="emp_TimeTable" Mode="In" Type="String" />
+            <Parameter Name="month" Mode="In" Type="Int32" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="emp_attendance">
+          <Key>
+            <PropertyRef Name="transaction_id" />
+          </Key>
+          <Property Name="emp_num" Type="Int32" Nullable="false" />
+          <Property Name="acct_num" Type="Int32" Nullable="false" />
+          <Property Name="emp_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="att_date" Type="DateTime" Precision="0" />
+          <Property Name="Timetable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clock_in" Type="Time" Precision="7" />
+          <Property Name="clock_out" Type="Time" Precision="7" />
+          <Property Name="IsAbsent" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="transaction_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <ComplexType Name="attendace">
+          <Property Type="Int32" Name="emp_num" Nullable="false" />
+          <Property Type="Int32" Name="acct_num" Nullable="false" />
+          <Property Type="String" Name="emp_name" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="att_date" Nullable="true" />
+          <Property Type="String" Name="Timetable" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="clock_in" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="clock_out" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="IsAbsent" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Department" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="transaction_id" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AttendanceModelStoreContainer" CdmEntityContainer="AttendanceEntities">
+          <EntitySetMapping Name="emp_attendance">
+            <EntityTypeMapping TypeName="AttendanceModel.emp_attendance">
+              <MappingFragment StoreEntitySet="emp_attendance">
+                <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="IsAbsent" ColumnName="IsAbsent" />
+                <ScalarProperty Name="clock_out" ColumnName="clock_out" />
+                <ScalarProperty Name="clock_in" ColumnName="clock_in" />
+                <ScalarProperty Name="Timetable" ColumnName="Timetable" />
+                <ScalarProperty Name="att_date" ColumnName="att_date" />
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="acct_num" ColumnName="acct_num" />
+                <ScalarProperty Name="emp_num" ColumnName="emp_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_getName" FunctionName="AttendanceModel.Store.usp_getName" />
+          <FunctionImportMapping FunctionImportName="usp_GetAttendance" FunctionName="AttendanceModel.Store.usp_GetAttendance">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AttendanceModel.attendace">
+                <ScalarProperty Name="emp_num" ColumnName="emp_num" />
+                <ScalarProperty Name="acct_num" ColumnName="acct_num" />
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="att_date" ColumnName="att_date" />
+                <ScalarProperty Name="Timetable" ColumnName="Timetable" />
+                <ScalarProperty Name="clock_in" ColumnName="clock_in" />
+                <ScalarProperty Name="clock_out" ColumnName="clock_out" />
+                <ScalarProperty Name="IsAbsent" ColumnName="IsAbsent" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
