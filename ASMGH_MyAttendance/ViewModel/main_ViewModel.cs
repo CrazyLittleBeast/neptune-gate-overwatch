@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace ASMGH_MyAttendance.ViewModel
@@ -79,11 +81,29 @@ namespace ASMGH_MyAttendance.ViewModel
             }
         }
 
-        
+
 
 
 
         #region COMMAND
+
+
+        public ICommand PrintDTR_cmd
+        {
+            get
+            {
+                return new ActionCommand(p => PrintDTR((FlowDocument)p));
+            }
+        }
+
+
+        public void PrintDTR(FlowDocument v)
+        {
+            PrintDialog printDlg = new PrintDialog();
+            printDlg.PrintDocument(((IDocumentPaginatorSource)v).DocumentPaginator, "DTR-" + employee_name);
+
+
+        }
 
         public ICommand cmd_ScrollMonth
         {
@@ -136,9 +156,8 @@ namespace ASMGH_MyAttendance.ViewModel
             NotifyPropertyChanged("GetAttendance_AM");
             NotifyPropertyChanged("GetAttendance_PM");
             NotifyPropertyChanged("employee_name");
-            
+            NotifyPropertyChanged("attendance_date");
         }
-
 
         public ICommand CloseWindow_cmd
         {
