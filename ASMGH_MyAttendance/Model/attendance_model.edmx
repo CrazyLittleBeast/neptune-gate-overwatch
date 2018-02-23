@@ -29,6 +29,11 @@
         <Function Name="usp_getName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="emp_number" Type="int" Mode="In" />
         </Function>
+        <Function Name="usp_GetTimeRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emp_num" Type="int" Mode="In" />
+          <Parameter Name="month" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="AttendanceModelStoreContainer">
           <EntitySet Name="emp_attendance" EntityType="Self.emp_attendance" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -44,6 +49,11 @@
           <FunctionImport Name="usp_GetAttendance" ReturnType="Collection(AttendanceModel.attendace)">
             <Parameter Name="emp_num" Mode="In" Type="Int32" />
             <Parameter Name="emp_TimeTable" Mode="In" Type="String" />
+            <Parameter Name="month" Mode="In" Type="Int32" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetTimeRecord" ReturnType="Collection(AttendanceModel.EmpTimeRecord)">
+            <Parameter Name="emp_num" Mode="In" Type="Int32" />
             <Parameter Name="month" Mode="In" Type="Int32" />
             <Parameter Name="year" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -74,6 +84,20 @@
           <Property Type="String" Name="IsAbsent" Nullable="true" MaxLength="8" />
           <Property Type="String" Name="Department" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="transaction_id" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="EmpTimeRecord">
+          <Property Type="String" Name="emp_name" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="DATE" Nullable="true" />
+          <Property Type="String" Name="am_in" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="am_out" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="pm_in" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="pm_out" Nullable="true" MaxLength="4000" />
+          <Property Type="Int32" Name="amhours" Nullable="true" />
+          <Property Type="Int32" Name="amMinute" Nullable="true" />
+          <Property Type="Int32" Name="pmHours" Nullable="true" />
+          <Property Type="Int32" Name="pmMinute" Nullable="true" />
+          <Property Type="Int32" Name="UHour" Nullable="true" />
+          <Property Type="Int32" Name="UMin" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -111,6 +135,24 @@
                 <ScalarProperty Name="IsAbsent" ColumnName="IsAbsent" />
                 <ScalarProperty Name="Department" ColumnName="Department" />
                 <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetTimeRecord" FunctionName="AttendanceModel.Store.usp_GetTimeRecord">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AttendanceModel.EmpTimeRecord">
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="am_in" ColumnName="am_in" />
+                <ScalarProperty Name="am_out" ColumnName="am_out" />
+                <ScalarProperty Name="pm_in" ColumnName="pm_in" />
+                <ScalarProperty Name="pm_out" ColumnName="pm_out" />
+                <ScalarProperty Name="amhours" ColumnName="amhours" />
+                <ScalarProperty Name="amMinute" ColumnName="amMinute" />
+                <ScalarProperty Name="pmHours" ColumnName="pmHours" />
+                <ScalarProperty Name="pmMinute" ColumnName="pmMinute" />
+                <ScalarProperty Name="UHour" ColumnName="UHour" />
+                <ScalarProperty Name="UMin" ColumnName="UMin" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

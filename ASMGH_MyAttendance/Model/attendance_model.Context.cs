@@ -58,5 +58,22 @@ namespace ASMGH_MyAttendance.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<attendace>("usp_GetAttendance", emp_numParameter, emp_TimeTableParameter, monthParameter, yearParameter);
         }
+    
+        public virtual ObjectResult<EmpTimeRecord> usp_GetTimeRecord(Nullable<int> emp_num, Nullable<int> month, Nullable<int> year)
+        {
+            var emp_numParameter = emp_num.HasValue ?
+                new ObjectParameter("emp_num", emp_num) :
+                new ObjectParameter("emp_num", typeof(int));
+    
+            var monthParameter = month.HasValue ?
+                new ObjectParameter("month", month) :
+                new ObjectParameter("month", typeof(int));
+    
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EmpTimeRecord>("usp_GetTimeRecord", emp_numParameter, monthParameter, yearParameter);
+        }
     }
 }

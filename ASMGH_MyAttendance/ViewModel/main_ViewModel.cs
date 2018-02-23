@@ -16,6 +16,8 @@ namespace ASMGH_MyAttendance.ViewModel
     {
         private IMainAccess ma = new da_main();
 
+
+       
         public DateTime attendance_date
         {
             get
@@ -81,7 +83,18 @@ namespace ASMGH_MyAttendance.ViewModel
             }
         }
 
+        public ICollection<EmpTimeRecord> GetEmployeeTimeRecord
+        {
+            get
+            {         
+              
+                return ma.GetEmpTimeRecord(_emp_num, attendance_date.Month, attendance_date.Year).ToList();
+            }
+        }
 
+
+        public EmpTimeRecord EmpTime;
+   
 
 
 
@@ -92,6 +105,8 @@ namespace ASMGH_MyAttendance.ViewModel
         {
             get
             {
+
+         
                 return new ActionCommand(p => PrintDTR((FlowDocument)p));
             }
         }
@@ -157,6 +172,8 @@ namespace ASMGH_MyAttendance.ViewModel
             NotifyPropertyChanged("GetAttendance_PM");
             NotifyPropertyChanged("employee_name");
             NotifyPropertyChanged("attendance_date");
+
+            NotifyPropertyChanged("GetEmployeeTimeRecord");
         }
 
         public ICommand CloseWindow_cmd

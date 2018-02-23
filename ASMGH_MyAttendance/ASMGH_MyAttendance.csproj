@@ -93,6 +93,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>attendance_model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\EmpTimeRecord.cs">
+      <DependentUpon>attendance_model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\emp_attendance.cs">
       <DependentUpon>attendance_model.tt</DependentUpon>
     </Compile>
