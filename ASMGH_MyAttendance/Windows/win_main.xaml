@@ -45,13 +45,13 @@
 
 
             <Grid HorizontalAlignment="Left" 
-                    Width="800"
+                    Width="447"
                     Height="1005" 
                   Margin="366,25,0,0" VerticalAlignment="Top">
 
                 <Border Style="{StaticResource SimpleBorder}" CornerRadius="3" Background="White"/>
 
-                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
 
 
                     <FlowDocument x:Name="DailyTime_Flow"
@@ -60,34 +60,37 @@
                                   IsHyphenationEnabled="True"
                                   PagePadding="5"
                                   ColumnWidth="750"                           
-                                  PageHeight="1500">
+                                  PageHeight="1250">
                         <Paragraph>
-                            <Grid Width="750" Height="1200">
+                            <Grid Width="401" Height="1200">
                                 <Border Style="{StaticResource SimpleBorder}" Background="{x:Null}" 
                                         Width="350"
                              
-                                        BorderBrush="#FF292929" Margin="19,10,381,10"/>
+                                        BorderBrush="#FF292929" Margin="19,10,0,10" HorizontalAlignment="Left"/>
 
 
 
                                 <Grid HorizontalAlignment="Left" Height="1200" 
                                       Margin="19,10,0,0" VerticalAlignment="Top" Width="730">
 
+                                    <Image Source="{StaticResource logo}" Margin="12,3,651,1113"/>
+
                                     <Label Content="{Binding employee_name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
-                                        HorizontalAlignment="Left" Height="29" Margin="6,87,0,0" 
+                                        Padding="1"
+                                        HorizontalAlignment="Left" Height="24" Margin="10,91,0,0" 
                                         VerticalAlignment="Top" 
-                                        Width="339" 
+                                        Width="331" 
                                         BorderThickness="0,0,0,2" 
                                         VerticalContentAlignment="Bottom" 
                                         HorizontalContentAlignment="Center"
                                         FontFamily="Consolas" 
-                                        FontSize="13.333" FontWeight="Bold" BorderBrush="#FF4D4D4D">
+                                        FontSize="12" FontWeight="Bold" BorderBrush="#FF4D4D4D">
                                         <Label.Foreground>
                                             <SolidColorBrush Color="{DynamicResource DarkDays}"/>
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="NAME" HorizontalContentAlignment="Center" Height="16" Margin="124,116,494,0" 
+                                    <Label Content="NAME" HorizontalContentAlignment="Center" Height="16" Margin="124,115,494,0" 
                                         Padding="1"
                                            VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -101,13 +104,14 @@
                                             <SolidColorBrush Color="{DynamicResource DarkDays}"/>
                                         </Label.Foreground>
                                     </Label>
-                                    <Label Content="DAILY TIME RECORD" HorizontalContentAlignment="Center" Height="32" Margin="8,10,385,0" 
+
+                                    <Label Content="DAILY TIME RECORD" HorizontalContentAlignment="Center" Height="18" Margin="93,50,426,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
                                         VerticalContentAlignment="Center" 
                                         FontFamily="Consolas" 
-                                        FontSize="25" FontWeight="Bold">
+                                        FontSize="15" FontWeight="Bold">
                                         <Label.BorderBrush>
                                             <SolidColorBrush Color="{DynamicResource DarkDays}"/>
                                         </Label.BorderBrush>
@@ -116,8 +120,8 @@
                                         </Label.Foreground>
                                     </Label>
 
-
-                                    <Label Content="FOR THE MONTH OF" HorizontalContentAlignment="Left" Height="28" Margin="6,136,589,0" 
+                                    <Label Content="FOR THE MONTH OF" HorizontalContentAlignment="Left" 
+                                        Height="20" Margin="6,137,589,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -132,14 +136,16 @@
                                         </Label.Foreground>
                                     </Label>
 
-
-                                    <Label Content="{Binding attendance_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                                                
+                                    <Label Content="{Binding selected_attendance_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                                                
                                         
                                         ContentStringFormat="MMMM-yyyy"
                                            
-                                        HorizontalAlignment="Left" Height="28" Margin="132,136,0,0" 
+                                        HorizontalAlignment="Left" Margin="129,137,0,0" 
                                         VerticalAlignment="Top" 
-                                        Width="213" 
+                                        Height="20" 
+                                        Width="200" 
+                                        Padding="1"
+                                           
                                         BorderThickness="0,0,0,1" 
                                         VerticalContentAlignment="Center" 
                                         HorizontalContentAlignment="Left"
@@ -152,7 +158,7 @@
 
                                     </Label>
                                     <Label Content="OFFICIAL HOURS OF ARRIVAL AND DEPARTURE"
-                                           HorizontalContentAlignment="Left" Height="16" Margin="6,169,380,0" 
+                                           HorizontalContentAlignment="Left" Height="16" Margin="6,162,380,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -166,8 +172,8 @@
                                             <SolidColorBrush Color="{DynamicResource DarkDays}"/>
                                         </Label.Foreground>
                                     </Label>
-                                    <Label Content="REGULAR DAYS:Monday-Friday AM:8:00-12:00 PM:1:00-5:00"
-                                        HorizontalContentAlignment="Left" Height="16" Margin="6,187,380,0" 
+                                    <Label Content="REGULAR DAYS: Monday-Friday AM:8:00-12:00|PM:1:00-5:00"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="6,176,380,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -182,8 +188,8 @@
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="WEEKENDS: AM: 8:00 - 12:00  PM: 1:00 - 5:00"
-                                        HorizontalContentAlignment="Left" Height="16" Margin="6,203,380,0" 
+                                    <Label Content="WEEKENDS:     AM: 8:00 - 12:00|PM: 1:00 - 5:00"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="6,191,380,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -200,7 +206,7 @@
 
                                     <TextBlock Text="     I certify on my honor that the avove is true and correct report of the hours of work performed record of which was made daily at the time of arrival and departure from office"
                                        TextWrapping="Wrap"
-                                        Height="57" Margin="12,884,385,-704" 
+                                        Height="57" Margin="9,882,388,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         FontFamily="Consolas" 
@@ -213,7 +219,7 @@
                                        HorizontalAlignment="Left"
                                        VerticalContentAlignment="Top"
                                        HorizontalContentAlignment="Center"
-                                       Height="32" Margin="22,1008,0,-803"
+                                       Height="32" Margin="22,996,0,0"
                                        VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
                                     <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPS,MS"
@@ -240,7 +246,7 @@
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
                                         HorizontalContentAlignment="left"
-                                        Height="26" Margin="22,1078,0,-867"
+                                        Height="26" Margin="22,1060,0,0"
                                         VerticalAlignment="Top" Width="304" 
                                         FontFamily="Consolas" FontSize="11" FontWeight="Bold" BorderThickness="0"/>
                                     <Label Content="------------------------------------------------------------"
@@ -248,30 +254,80 @@
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
                                         HorizontalContentAlignment="left"
-                                        Height="26" Margin="6,1066,0,-855"
+                                        Height="26" Margin="6,1048,0,0"
                                         VerticalAlignment="Top" Width="339" 
                                         FontFamily="Consolas" FontSize="11" FontWeight="Bold" BorderThickness="0"/>
 
+                                    <Label Content="Angel Salazar Memorial General Hospital"
+                                       Height="20" Margin="93,14,426,0" 
+                                        Padding="0"
+                                        VerticalAlignment="Top" 
+                                        BorderThickness="0"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center" 
+                                        FontStretch="Condensed"
+                                        FontFamily="Arial" 
+                                        FontSize="12.5" FontWeight="Bold">
+                                        <Label.BorderBrush>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.BorderBrush>
+                                        <Label.Foreground>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.Foreground>
+                                    </Label>
+
+                                    <Label Content="San Jose de Buenavista, Antique"
+                                        Height="16" Margin="93,30,426,0" 
+                                        Padding="0"
+                                        VerticalAlignment="Top" 
+                                        BorderThickness="0,0,0,1"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center" 
+                                        FontStretch="Condensed"
+                                        FontFamily="Arial" 
+                                        FontSize="12" FontWeight="Bold" BorderBrush="#FF4E4D4A">
+                                        <Label.Foreground>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.Foreground>
+                                    </Label>
+
+
 
                                 </Grid>
+
+
 
                                 <DataGrid
                                     ItemsSource="{Binding GetEmployeeTimeRecord, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                                     Style="{StaticResource DG_FLAT}"
                                     CellStyle="{StaticResource DG_CELL_FLAT}"
-                                    RowHeight="20"
-                                    IsHitTestVisible="False"
-                                    Width="337" Margin="23,233,0,0"
+                                    
                                     ColumnHeaderHeight="30"
+                                    RowHeight="20"
+                                    
+                                    IsHitTestVisible="False"
+                                    Width="337" Margin="23,230,0,0"  
                                     CanUserResizeColumns="False"
-                                    RowBackground="Transparent" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" BorderBrush="{x:Null}" AlternationCount="1" Height="658" VerticalAlignment="Top" Background="{x:Null}">
+                                    RowBackground="Transparent" 
+                                    HorizontalScrollBarVisibility="Disabled" 
+                                    VerticalScrollBarVisibility="Disabled" 
+                                    BorderBrush="{x:Null}" 
+                                    AlternationCount="1"
+                                    Height="658" 
+                                    VerticalAlignment="Top"
+                                    Background="{x:Null}"
+                                    HeadersVisibility="Column">
 
                                     <DataGrid.AlternatingRowBackground>
                                         <SolidColorBrush Color="{DynamicResource Grass}"/>
                                     </DataGrid.AlternatingRowBackground>
+
                                     <DataGrid.ColumnHeaderStyle>
                                         <Style TargetType="{x:Type DataGridColumnHeader}">
                                             <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="BorderThickness" Value="1,1,0,1"/>
+                                            <Setter Property="BorderBrush" Value="Black"/>
                                         </Style>
                                     </DataGrid.ColumnHeaderStyle>
 
@@ -299,6 +355,50 @@
 
 
                                 </DataGrid>
+
+                                <Label Content="UNDERTIME"
+                                        Height="16" Margin="274,221,41,0" 
+                                        Padding="0"
+                                        VerticalAlignment="Top" 
+                                        BorderThickness="1"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center" 
+                                        FontStretch="Normal"
+                                        FontFamily="Arial" 
+                                        FontSize="10" FontWeight="Regular" 
+                                       Background="White" BorderBrush="#FF494949">
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                    </Label.Foreground>
+                                </Label>
+
+                                <Label Content="  "
+                                    Height="4" Margin="10,244,361,0" 
+                                    Padding="0"
+                                    VerticalAlignment="Top" 
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center" 
+                                    FontStretch="Condensed"
+                                    FontFamily="Arial" 
+                                    FontSize="10" FontWeight="Bold" Background="White" BorderBrush="#FF494949" RenderTransformOrigin="0.5,0.5">
+
+
+                                    <Label.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Label.RenderTransform>
+                                    <Label.Foreground>
+                                        <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                    </Label.Foreground>
+                                </Label>
+
+
+
 
 
                             </Grid>
@@ -393,9 +493,9 @@
             <Button Command="{Binding PrintDTR_cmd}"
                     CommandParameter="{Binding ElementName=DailyTime_Flow, Mode=OneWay}"
                 Content="PRINT" Style="{StaticResource Flat_Button}" 
-                Margin="4,0,0,611" Height="34" FontFamily="Arial" 
-                HorizontalAlignment="Left" VerticalAlignment="Bottom" 
-                Width="305" IsDefault="True">
+                Margin="10,395,0,0" Height="34" FontFamily="Arial" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Width="299" IsDefault="True">
 
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource MetroGreen}" Opacity="1"/>

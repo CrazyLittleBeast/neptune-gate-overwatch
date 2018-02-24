@@ -30,7 +30,25 @@ namespace ASMGH_MyAttendance.ViewModel
             }
         }
 
+
+      
+
         private DateTime _attendance_date = DateTime.Now;
+
+        public DateTime selected_attendance_date
+        {
+            get
+            {
+                _selected_attendance_date = attendance_date;
+                return _selected_attendance_date;
+            }
+            set
+            {
+                SetProperty(ref _selected_attendance_date, value, "selected_attendance_date");
+            }
+        }
+
+        private DateTime _selected_attendance_date;
 
         public int emp_num
         {
@@ -93,7 +111,7 @@ namespace ASMGH_MyAttendance.ViewModel
         }
 
 
-        public EmpTimeRecord EmpTime;
+        
    
 
 
@@ -171,8 +189,10 @@ namespace ASMGH_MyAttendance.ViewModel
             NotifyPropertyChanged("GetAttendance_AM");
             NotifyPropertyChanged("GetAttendance_PM");
             NotifyPropertyChanged("employee_name");
+
             NotifyPropertyChanged("attendance_date");
 
+            NotifyPropertyChanged("selected_attendance_date");
             NotifyPropertyChanged("GetEmployeeTimeRecord");
         }
 

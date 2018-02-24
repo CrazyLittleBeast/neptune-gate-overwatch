@@ -5,17 +5,9 @@
 
 
 
-    <BitmapImage x:Key="close_x" UriSource="pack://application:,,,/Resources/exit_24.png"/>  
-    <BitmapImage x:Key="cash" UriSource="pack://application:,,,/Resources/cash_stack.png"/>
-    <BitmapImage x:Key="money_add" UriSource="pack://application:,,,/Resources/money_add.png"/>
-    <BitmapImage x:Key="basket_put" UriSource="pack://application:,,,/Resources/basket_put.png"/>
-    <BitmapImage x:Key="remove_item" UriSource="pack://application:,,,/Resources/basket_remove.png"/>
-    <BitmapImage x:Key="empty_basket" UriSource="pack://application:,,,/Resources/basket_delete.png"/>
-    <BitmapImage x:Key="basket" UriSource="pack://application:,,,/Resources/basket.png"/>
-    <BitmapImage x:Key="search" UriSource="pack://application:,,,/Resources/search_plus.png"/>
-    <BitmapImage x:Key="Manage" UriSource="pack://application:,,,/Resources/categories.png"/>
-    <BitmapImage x:Key="CashTerminal" UriSource="pack://application:,,,/Resources/cash_terminal.png"/>
-    <BitmapImage x:Key="DBServer" UriSource="pack://application:,,,/Resources/database_server.png"/>
+    <BitmapImage x:Key="close_x" UriSource="pack://application:,,,/Resources/exit_24.png"/>
+    <BitmapImage x:Key="logo" UriSource="pack://application:,,,/Resources/asmghlogo_105.png"/>
+   
   
 
 
@@ -192,6 +184,7 @@
         <Setter Property="Height" Value="25" />
         <Setter Property="TextBlock.TextAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="Bold"/>
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridCell}">
