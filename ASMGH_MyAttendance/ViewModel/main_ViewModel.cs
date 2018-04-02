@@ -75,24 +75,6 @@ namespace ASMGH_MyAttendance.ViewModel
         }
         private string _timeTable;
 
-        public ICollection<attendace> GetAttendance_AM
-        {
-            get
-            {
-             
-                return ma.GetAttendance(_emp_num,"Morning", attendance_date.Month, attendance_date.Year).ToList();
-            }
-        }
-
-        public ICollection<attendace> GetAttendance_PM
-        {
-            get
-            {
-
-                return ma.GetAttendance(_emp_num, "Afternoon", attendance_date.Month, attendance_date.Year).ToList();
-            }
-        }
-
         public string employee_name
         {
             get

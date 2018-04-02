@@ -222,7 +222,7 @@
                                        Height="32" Margin="22,996,0,0"
                                        VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPS,MS"
+                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPSMS"
                                            Padding="1"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -353,9 +353,10 @@
                                         <DataGridTextColumn Header="MIN" Binding="{Binding UMin}" Width="43"/>
                                     </DataGrid.Columns>
 
-
+                                    
                                 </DataGrid>
 
+                                
                                 <Label Content="UNDERTIME"
                                         Height="16" Margin="274,221,41,0" 
                                         Padding="0"
@@ -562,7 +563,7 @@
                                        Height="32" Margin="22,996,0,0"
                                        VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPS,MS"
+                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPSMS"
                                            Padding="1"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -822,7 +823,7 @@
                             <SolidColorBrush Color="{DynamicResource BlueTag}" Opacity="1"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="V 2.12.0" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+                    <Label Content="V 2.82.0" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
 
 
 

@@ -10,7 +10,6 @@ namespace ASMGH_MyAttendance.DataAccess
 
     public interface IMainAccess
     {
-        ICollection<attendace> GetAttendance(int emp_num, string emp_TimeTable, int _month, int _year);
         ICollection<EmpTimeRecord> GetEmpTimeRecord(int emp_num, int _month, int _year);
 
         string GetEmployeeName(int emp_num);
@@ -38,13 +37,7 @@ namespace ASMGH_MyAttendance.DataAccess
             }
         }
 
-        public ICollection<attendace> GetAttendance(int emp_num, string emp_TimeTable, int _month, int _year)
-        {
-
-            var result = context.usp_GetAttendance(emp_num, emp_TimeTable, _month, _year);
-            return result.ToList();
-              
-        }
+  
 
         public ICollection<EmpTimeRecord> GetEmpTimeRecord(int emp_num, int _month, int _year)
         {

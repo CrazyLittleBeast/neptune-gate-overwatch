@@ -102,6 +102,9 @@
     <Compile Include="ViewModel\ActionCommand.cs" />
     <Compile Include="ViewModel\main_ViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="Windows\win_confirmPrint.xaml.cs">
+      <DependentUpon>win_confirmPrint.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\win_main.xaml.cs">
       <DependentUpon>win_main.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
     <Page Include="Att_resources\UI_Elements.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\win_confirmPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\win_main.xaml">
       <SubType>Designer</SubType>
