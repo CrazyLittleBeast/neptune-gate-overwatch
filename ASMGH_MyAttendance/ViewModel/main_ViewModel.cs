@@ -86,16 +86,28 @@ namespace ASMGH_MyAttendance.ViewModel
         public ICollection<EmpTimeRecord> GetEmployeeTimeRecord
         {
             get
-            {         
-              
-                return ma.GetEmpTimeRecord(_emp_num, attendance_date.Month, attendance_date.Year).ToList();
+            {
+                _employeeTimeRecord =  ma.GetEmpTimeRecord(_emp_num, attendance_date.Month, attendance_date.Year).ToList();
+                return _employeeTimeRecord;
             }
         }
 
+        public static ICollection<EmpTimeRecord> _employeeTimeRecord;
 
-        
-   
-
+        public int? UndertimeCalculation
+        {
+            get
+            {
+                if (_employeeTimeRecord != null)
+                {
+                    return _employeeTimeRecord.Sum(i => i.UMin);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        } 
 
 
         #region COMMAND
@@ -176,6 +188,8 @@ namespace ASMGH_MyAttendance.ViewModel
 
             NotifyPropertyChanged("selected_attendance_date");
             NotifyPropertyChanged("GetEmployeeTimeRecord");
+
+            NotifyPropertyChanged("UndertimeCalculation");
         }
 
         public ICommand CloseWindow_cmd

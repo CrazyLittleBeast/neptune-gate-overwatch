@@ -8,7 +8,7 @@
         WindowState="Maximized" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="win_main" Height="1080" Width="1920" Background="{x:Null}" AllowsTransparency="True" MouseDown="Window_MouseDown" Icon="/ASMGH_MyAttendance;component/Stack.ico">
+        Title="win_main" Height="1481" Width="1920" Background="{x:Null}" AllowsTransparency="True" MouseDown="Window_MouseDown" Icon="/ASMGH_MyAttendance;component/Stack.ico">
 
 
 
@@ -46,7 +46,7 @@
 
             <Grid HorizontalAlignment="Left" 
                     Width="850"
-                    Height="1005" 
+                    Height="1338" 
                   Margin="366,25,0,0" VerticalAlignment="Top">
 
                 <Border Style="{StaticResource SimpleBorder}" CornerRadius="3" Background="White"/>
@@ -206,7 +206,7 @@
 
                                     <TextBlock Text="     I certify on my honor that the above is true and correct report of the hours of work performed record of which was made daily at the time of arrival and departure from office"
                                        TextWrapping="Wrap"
-                                        Height="57" Margin="9,882,388,0" 
+                                        Height="57" Margin="9,902,388,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         FontFamily="Consolas" 
@@ -293,6 +293,7 @@
 
 
 
+
                                 </Grid>
 
 
@@ -353,10 +354,18 @@
                                         <DataGridTextColumn Header="MIN" Binding="{Binding UMin}" Width="43"/>
                                     </DataGrid.Columns>
 
-                                    
+
                                 </DataGrid>
 
-                                
+                                <TextBlock HorizontalAlignment="Left" Height="14" 
+                                           Margin="274,893,0,0" 
+                                           TextWrapping="Wrap" 
+                                           Text="{Binding UndertimeCalculation}" 
+                                           FontFamily="Consolas"
+                                           FontSize="12"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Top" Width="66"/>
+
                                 <Label Content="UNDERTIME"
                                         Height="16" Margin="274,221,41,0" 
                                         Padding="0"
