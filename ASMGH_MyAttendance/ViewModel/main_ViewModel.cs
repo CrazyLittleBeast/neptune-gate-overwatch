@@ -94,20 +94,39 @@ namespace ASMGH_MyAttendance.ViewModel
 
         public static ICollection<EmpTimeRecord> _employeeTimeRecord;
 
-        public int? UndertimeCalculation
+        public int UndertimeHour
         {
             get
             {
-                if (_employeeTimeRecord != null)
-                {
-                    return _employeeTimeRecord.Sum(i => i.UMin);
-                }
-                else
-                {
-                    return 0;
-                }
+                 return CalculateUndertime() / 60;
             }
         } 
+
+        public int UndertimeMin
+        {
+            get
+            {
+                return CalculateUndertime() % 60;
+            }
+        }
+
+
+        private int CalculateUndertime()
+        {
+            int totalMin;
+
+            if (_employeeTimeRecord != null)
+            {
+                totalMin = (int)_employeeTimeRecord.Sum(i => i.UMin);
+            }
+
+            else
+            {
+                totalMin = 0;
+            }
+
+            return totalMin;
+        }
 
 
         #region COMMAND
@@ -189,7 +208,9 @@ namespace ASMGH_MyAttendance.ViewModel
             NotifyPropertyChanged("selected_attendance_date");
             NotifyPropertyChanged("GetEmployeeTimeRecord");
 
-            NotifyPropertyChanged("UndertimeCalculation");
+            NotifyPropertyChanged("UndertimeHour");
+            NotifyPropertyChanged("UndertimeMin");
+
         }
 
         public ICommand CloseWindow_cmd
