@@ -74,7 +74,7 @@
                                 <Grid HorizontalAlignment="Left" Height="1200" 
                                       Margin="19,10,0,0" VerticalAlignment="Top" Width="730">
 
-                                    <Image Source="{StaticResource logo}" Margin="12,3,651,1113"/>
+                                    <Image Source="{StaticResource province_logo}" Margin="6,5,639,1103"/>
 
                                     <Label Content="{Binding employee_name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                                         Padding="1"
@@ -433,6 +433,7 @@
                                     </Label.Foreground>
                                 </Label>
                             </Grid>
+
                             <Grid Width="401" Height="1200">
                                 <Border Style="{StaticResource SimpleBorder}" Background="{x:Null}" 
                                         Width="350"
@@ -444,7 +445,7 @@
                                 <Grid HorizontalAlignment="Left" Height="1200" 
                                       Margin="19,10,0,0" VerticalAlignment="Top" Width="730">
 
-                                    <Image Source="{StaticResource logo}" Margin="12,3,651,1113"/>
+                                    <Image Source="{StaticResource province_logo}" Margin="6,5,639,1103"/>
 
                                     <Label Content="{Binding employee_name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                                         Padding="1"
@@ -803,7 +804,8 @@
                                     </Label.Foreground>
                                 </Label>
                             </Grid>
-                       
+
+
 
 
                         </Paragraph>

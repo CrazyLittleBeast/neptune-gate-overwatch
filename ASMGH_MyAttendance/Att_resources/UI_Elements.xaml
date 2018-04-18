@@ -7,8 +7,9 @@
 
     <BitmapImage x:Key="close_x" UriSource="pack://application:,,,/Resources/exit_24.png"/>
     <BitmapImage x:Key="logo" UriSource="pack://application:,,,/Resources/asmghlogo_105.png"/>
-   
-  
+    <BitmapImage x:Key="province_logo" UriSource="pack://application:,,,/Resources/province_log117.png"/>
+
+
 
 
 
