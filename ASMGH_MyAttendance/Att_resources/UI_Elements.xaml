@@ -249,6 +249,12 @@
         <Setter Property="Margin" Value="5"/>
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}" x:Key="CellContentAlignCenter">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+
 
     <!--END OF DATAGRID-->
 
