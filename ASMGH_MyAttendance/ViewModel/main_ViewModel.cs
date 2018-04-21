@@ -17,7 +17,24 @@ namespace ASMGH_MyAttendance.ViewModel
         private IMainAccess ma = new da_main();
 
 
-       
+
+        public string SaturdaySchedule
+        {
+            get
+            {
+                return _saturdaySchedule;
+            }
+            set
+            {
+                SetProperty(ref _saturdaySchedule, value, "SaturdaySchedule");
+            }
+        }
+        
+        private string _saturdaySchedule = "AM: 8:00 - 12:00|PM: 1:00 - 5:00";
+
+
+
+
         public DateTime attendance_date
         {
             get
@@ -131,6 +148,19 @@ namespace ASMGH_MyAttendance.ViewModel
 
         #region COMMAND
 
+
+        public ICommand RestoreDefaultDate_cmd
+        {
+            get
+            {
+                return new ActionCommand(p => RestoreDefaultDate());
+            }
+        }
+
+        public void RestoreDefaultDate()
+        {
+            SaturdaySchedule = "AM: 8:00 - 12:00|PM: 1:00 - 5:00";
+        }
 
         public ICommand PrintDTR_cmd
         {

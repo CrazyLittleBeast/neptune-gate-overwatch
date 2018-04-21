@@ -187,8 +187,8 @@
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="SATURDAY:     AM: 8:00 - 12:00|PM: 1:00 - 5:00"
-                                        HorizontalContentAlignment="Left" Height="16" Margin="6,176,380,0" 
+                                    <Label Content="SATURDAY:"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="6,176,648,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -256,6 +256,22 @@
                                         Height="26" Margin="6,1048,0,0"
                                         VerticalAlignment="Top" Width="339" 
                                         FontFamily="Consolas" FontSize="11" FontWeight="Bold" BorderThickness="0"/>
+
+                                    <Label Content="{Binding SaturdaySchedule,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="91,176,389,0" 
+                                        Padding="1"
+                                        VerticalAlignment="Top" 
+                                        BorderThickness="0" 
+                                        VerticalContentAlignment="Center" 
+                                        FontFamily="Consolas" 
+                                        FontSize="11" FontWeight="Bold">
+                                        <Label.BorderBrush>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.BorderBrush>
+                                        <Label.Foreground>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.Foreground>
+                                    </Label>
 
 
 
@@ -416,7 +432,7 @@
 
                                     <Label Content="{Binding employee_name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                                         Padding="1"
-                                        HorizontalAlignment="Left" Height="24" Margin="10,64,0,0" 
+                                        HorizontalAlignment="Left" Height="24" Margin="20,60,0,0" 
                                         VerticalAlignment="Top" 
                                         Width="331" 
                                         BorderThickness="0,0,0,2" 
@@ -429,7 +445,7 @@
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="NAME" HorizontalContentAlignment="Center" Height="16" Margin="124,88,494,0" 
+                                    <Label Content="NAME" HorizontalContentAlignment="Center" Height="16" Margin="134,84,484,0" 
                                         Padding="1"
                                            VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -444,7 +460,7 @@
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="DAILY TIME RECORD" HorizontalContentAlignment="Center" Height="18" Margin="75,27,444,0" 
+                                    <Label Content="DAILY TIME RECORD" HorizontalContentAlignment="Center" Height="18" Margin="80,27,439,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -527,8 +543,8 @@
                                         </Label.Foreground>
                                     </Label>
 
-                                    <Label Content="SATURDAY:     AM: 8:00 - 12:00|PM: 1:00 - 5:00"
-                                        HorizontalContentAlignment="Left" Height="16" Margin="6,176,380,0" 
+                                    <Label Content="SATURDAY:"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="6,176,648,0" 
                                         Padding="1"
                                         VerticalAlignment="Top" 
                                         BorderThickness="0" 
@@ -596,6 +612,22 @@
                                         Height="26" Margin="6,1048,0,0"
                                         VerticalAlignment="Top" Width="339" 
                                         FontFamily="Consolas" FontSize="11" FontWeight="Bold" BorderThickness="0"/>
+
+                                    <Label Content="{Binding SaturdaySchedule,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
+                                        HorizontalContentAlignment="Left" Height="16" Margin="91,176,389,0" 
+                                        Padding="1"
+                                        VerticalAlignment="Top" 
+                                        BorderThickness="0" 
+                                        VerticalContentAlignment="Center" 
+                                        FontFamily="Consolas" 
+                                        FontSize="11" FontWeight="Bold">
+                                        <Label.BorderBrush>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.BorderBrush>
+                                        <Label.Foreground>
+                                            <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                                        </Label.Foreground>
+                                    </Label>
 
 
 
@@ -834,7 +866,8 @@
                             <SolidColorBrush Color="{DynamicResource BlueTag}" Opacity="1"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="V 2.82.0" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+                    <Label Content="V 2.102.3" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+
 
 
 
@@ -844,7 +877,7 @@
             <Button Command="{Binding PrintDTR_cmd}"
                     CommandParameter="{Binding ElementName=DailyTime_Flow, Mode=OneWay}"
                 Content="PRINT" Style="{StaticResource Flat_Button}" 
-                Margin="10,395,0,0" Height="34" FontFamily="Arial" 
+                Margin="10,551,0,0" Height="34" FontFamily="Arial" 
                 HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Width="299" IsDefault="True">
 
@@ -852,6 +885,56 @@
                     <SolidColorBrush Color="{DynamicResource MetroGreen}" Opacity="1"/>
                 </Button.Background>
             </Button>
+
+            <Grid Margin="10,407,0,0" HorizontalAlignment="Left" Width="299" Height="121" VerticalAlignment="Top">
+                <Border Style="{StaticResource SimpleBorder}"
+                        BorderThickness="0,1"
+                        CornerRadius="3"/>
+
+                <Label Content="Saturday Schedule" 
+                    HorizontalAlignment="Left" 
+                    Height="31" 
+                    VerticalAlignment="Top" 
+                    Width="261" 
+                    VerticalContentAlignment="Center" 
+                    HorizontalContentAlignment="Center"
+                    Foreground="White" FontFamily="Consolas"
+                    FontWeight="Bold" FontSize="15" Margin="17,8,0,0"/>
+
+
+                <TextBox HorizontalAlignment="Left" 
+                    Text="{Binding SaturdaySchedule, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    FontFamily="Consolas"
+                    FontWeight="Bold"
+                    TextAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Height="27" 
+                    Width="265"
+                    Margin="17,44,0,0" 
+                    TextWrapping="Wrap" 
+                    VerticalAlignment="Top" RenderTransformOrigin="0.498,0.556" TextOptions.TextFormattingMode="Display"    >
+                    <TextBox.Foreground>
+                        <SolidColorBrush Color="{DynamicResource DarkDays}"/>
+                    </TextBox.Foreground>
+                </TextBox>
+
+                <Button Command="{Binding RestoreDefaultDate_cmd}"
+                    Content="Restore Default" Style="{StaticResource Flat_Button}" 
+                    Margin="17,78,0,0" Height="23" FontFamily="Arial" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Width="133" IsDefault="True">
+
+                    <Button.Background>
+                        <SolidColorBrush Color="{DynamicResource MetroPurple}" Opacity="1"/>
+                    </Button.Background>
+                </Button>
+
+
+
+
+            </Grid>
+            
+            
 
 
 
