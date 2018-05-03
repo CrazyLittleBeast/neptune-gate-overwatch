@@ -115,7 +115,11 @@ namespace ASMGH_MyAttendance.ViewModel
         {
             get
             {
-                 return CalculateUndertime() / 60;
+
+                return (int)_employeeTimeRecord.Sum(i => i.UHour) + (CalculateUndertime() / 60);
+
+                //(int)_employeeTimeRecord.Sum(i => i.UHour);
+                //CalculateUndertime() / 60;
             }
         } 
 
