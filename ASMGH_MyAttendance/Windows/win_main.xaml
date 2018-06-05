@@ -32,7 +32,8 @@
         <Grid Margin="10">
             <Button Style="{StaticResource Flat_Button}" 
                  Command="{Binding CloseWindow_cmd}" Margin="10,987,0,0" Width="134" Height="43"
-                 CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                 CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left">
 
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource bad_red}" Opacity="1"/>
@@ -866,7 +867,7 @@
                             <SolidColorBrush Color="{DynamicResource BlueTag}" Opacity="1"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="V 2.108.8" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+                    <Label Content="V 2.108.9" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
 
 
 
@@ -933,8 +934,24 @@
 
 
             </Grid>
-            
-            
+            <Label Content="Information Technology Department 2018" 
+                Padding="1"
+                FontFamily="Consolas"
+                HorizontalAlignment="Left" Height="21" 
+                VerticalAlignment="Top" 
+                Width="263" Foreground="#7FFFFFFF" 
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center" Margin="1617,1020,0,-1" FontSize="11" FontWeight="Bold" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed"/>
+            <Label Content="Angel Salazar Memorial General Hospital" 
+                Padding="1"
+                FontFamily="Consolas"
+                HorizontalAlignment="Left" Height="21" 
+                VerticalAlignment="Top" 
+                Width="263" Foreground="#7FFFFFFF" 
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center" Margin="1617,1009,0,0" FontSize="11" FontWeight="Bold" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed"/>
+
+
 
 
 
