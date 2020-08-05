@@ -867,7 +867,7 @@
                             <SolidColorBrush Color="{DynamicResource BlueTag}" Opacity="1"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="V 2.108.9" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+                    <Label Content="V 2.208.1" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
 
 
 
