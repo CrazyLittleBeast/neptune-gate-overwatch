@@ -8,7 +8,7 @@
         WindowState="Maximized" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="win_main" Height="1080" Width="1920" Background="{x:Null}" AllowsTransparency="True" MouseDown="Window_MouseDown" Icon="/ASMGH_MyAttendance;component/Stack.ico">
+        Title="win_main" Height="1085" Width="1920" Background="{x:Null}" AllowsTransparency="True" MouseDown="Window_MouseDown" Icon="/ASMGH_MyAttendance;component/Stack.ico">
 
 
 
@@ -222,7 +222,7 @@
                                        Height="32" Margin="22,1000,0,0"
                                        VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPSMS"
+                                    <Label Content="JOSE LYNDION A. PEREZ, MD"
                                            Padding="1"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -230,7 +230,7 @@
                                         Height="26" Margin="22,1124,0,-913"
                                         VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="PROVINCIAL HEALTH OFFICER II"
+                                    <Label Content="ASSISTING ADMINISTRATOR MANAGER"
                                            Padding="0"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -578,7 +578,7 @@
                                        Height="32" Margin="22,1000,0,0"
                                        VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="RIC NOEL A. NACIONGAYO MD,MPA,FPSMS"
+                                    <Label Content="JOSE LYNDION A. PEREZ, MD"
                                            Padding="1"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -586,7 +586,7 @@
                                         Height="26" Margin="22,1124,0,-913"
                                         VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="PROVINCIAL HEALTH OFFICER II"
+                                    <Label Content="ASSISTING ADMINISTRATOR MANAGER"
                                            Padding="0"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
