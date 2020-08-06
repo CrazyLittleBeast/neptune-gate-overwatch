@@ -230,7 +230,7 @@
                                         Height="26" Margin="22,1124,0,-913"
                                         VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="ASSISTING ADMINISTRATOR MANAGER"
+                                    <Label Content="MEDICAL SPECIALIST II"
                                            Padding="0"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -586,7 +586,7 @@
                                         Height="26" Margin="22,1124,0,-913"
                                         VerticalAlignment="Top" Width="304" FontFamily="Consolas" FontSize="12" FontWeight="Bold" BorderThickness="0,2,0,0" BorderBrush="#FF252525"/>
 
-                                    <Label Content="ASSISTING ADMINISTRATOR MANAGER"
+                                    <Label Content="MEDICAL SPECIALIST II"
                                            Padding="0"
                                         HorizontalAlignment="Left"
                                         VerticalContentAlignment="Top"
@@ -867,7 +867,7 @@
                             <SolidColorBrush Color="{DynamicResource BlueTag}" Opacity="1"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="V 2.208.1" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
+                    <Label Content="V 2.208.2" HorizontalAlignment="Left" Height="22" Margin="2,-46,0,0" VerticalAlignment="Top" Width="136" VerticalContentAlignment="Center" Foreground="White" FontFamily="Consolas" FontSize="10.667" FontWeight="Bold"/>
 
 
 
