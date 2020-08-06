@@ -1,0 +1,121 @@
+[33mcommit 8f846b362f2321a3814eab82bfac4228dfa46a96[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: CrazyLittleBeast <cerberus.outlaw@gmail.com>
+Date:   Wed Aug 5 10:12:39 2020 +0800
+
+    updated conn
+
+[33mcommit ea0d7648f705475fcf8ecc4466530b36bdacfa98[m
+Author: CrazyLittleBeast <cerberus.outlaw@gmail.com>
+Date:   Wed Aug 5 09:49:48 2020 +0800
+
+    Updated version desc
+
+[33mcommit 1c8a1a5d45944ca2f8c557ca5ee6d4c18a44286c[m
+Author: CrazyLittleBeast <cerberus.outlaw@gmail.com>
+Date:   Wed Aug 5 09:45:53 2020 +0800
+
+    Updated Assignatory
+
+[33mcommit 5923fa18f794ba89af396f126ce8da15e56cafdf[m[33m ([m[1;31morigin/attendace-overwatch-csc[m[33m, [m[1;32mattendace-overwatch-csc[m[33m)[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Tue Apr 30 13:47:11 2019 +0800
+
+    Update App.config
+    
+    Update app config
+
+[33mcommit 7d5959b1a09c99a073e97c2db62bc45674ac4ec5[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Tue Jun 5 10:34:40 2018 +0800
+
+    stabe with department name and year
+
+[33mcommit 45cdce511f221938ffda075cbb1eeeca150ef7d9[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Thu May 3 10:59:22 2018 +0800
+
+    Fixed issue with total Undertime Calculation
+
+[33mcommit ac721fd51c30c497b9559c30b6bb49bc459f47cc[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Sat Apr 21 18:38:49 2018 +0800
+
+    Added Saturday schedule changing
+
+[33mcommit e09c2a4c2045dbca4669d0bc08f33ab7e9c1da3a[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Fri Apr 20 12:45:22 2018 +0800
+
+    Complete DTR template for csc compliance
+
+[33mcommit 5dd4e2ed0530d962dfb731d61ff2c371c8d24014[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Thu Apr 19 17:47:25 2018 +0800
+
+    First commit branch
+
+[33mcommit 204246dbf410f8e5152289da3c8810489a7037cd[m[33m ([m[1;31morigin/attendance-overwatch-V2[m[33m, [m[1;32mattendance-overwatch-V2[m[33m)[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Wed Apr 18 08:23:53 2018 +0800
+
+    Stabiity update with provincial logo
+
+[33mcommit c1d8f02979f36932130894b4d068d99fa5c50e1d[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Wed Apr 4 10:44:43 2018 +0800
+
+    added Total Undertime calculation
+
+[33mcommit edb3a01040b97a4f25e331c98020da8fe092b587[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Tue Apr 3 17:39:52 2018 +0800
+
+    Update for total Under Time
+
+[33mcommit 14c1a5ca7d5bd6fbff754bee55a37291872cb6cc[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Mon Apr 2 18:57:46 2018 +0800
+
+    updated algo for undertime comp
+
+[33mcommit bddca0d67ecbfe9f9b75a85af81cec90a96d53c6[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Wed Feb 28 17:34:04 2018 +0800
+
+    Dual Printout
+
+[33mcommit 72a759be998a7147d95d1532f3aa352eb96cf2fc[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Sat Feb 24 17:18:26 2018 +0800
+
+    template modification and bug fixes
+
+[33mcommit 4758d47058b669a1d15e29ed95793ce700a0039a[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Fri Feb 23 16:52:17 2018 +0800
+
+    DTR Template Complte, 1st Version
+
+[33mcommit 38506fb833334b93d7e72235d5cae8766cd14daf[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Tue Feb 20 16:48:13 2018 +0800
+
+    Basic template DTR and Print function
+
+[33mcommit 3b3dfe42d9b5b03727ce0a507137ed6435e0c448[m
+Author: Jazz Adrias <cerberus.outlaw@gmail.com>
+Date:   Tue Feb 13 09:36:00 2018 +0800
+
+    Set theme jekyll-theme-merlot
+
+[33mcommit e0f19d1ff00acb99673f4982568d96682fe0696c[m
+Author: crazylittlebeast <cerberus.outlaw@gmail.com>
+Date:   Tue Feb 13 09:31:02 2018 +0800
+
+    First commit
+
+[33mcommit 63355a7d154d058c5af306425071193da15404fd[m
+Author: J <J@DESKTOP-5VDJ3DR>
+Date:   Wed Jan 10 13:21:47 2018 +0800
+
+    Add .gitignore and .gitattributes.
